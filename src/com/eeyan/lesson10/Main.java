@@ -38,6 +38,10 @@ public class Main {
 
         main.printArrays();
 
+        main.deleteValueFromSpecificIndex(6);
+
+        main.printArrays();
+
 
     }
 
@@ -99,6 +103,18 @@ public class Main {
             }
         }
 
+    }
+
+
+    private void deleteValueFromSpecificIndex(int index){
+        if(index >= numOfElements){
+            System.out.println("Hey, delete existing things!!!");
+        }else{
+            for (int i = index; i <(numOfElements - 1) ; i++) {
+                arrayOfNumbers[i] = arrayOfNumbers[i + 1];
+            }
+            numOfElements--;
+        }
     }
 
 }
