@@ -30,7 +30,7 @@ public class Main {
         Main main = new Main();
 
         main.generateRandomNumbers();
-       /* main.printArrays();
+        main.printArrays();
         main.addValueToArray(25);
         System.out.println("The values were found at: "+main.searchValues(25));
 
@@ -39,32 +39,12 @@ public class Main {
         main.printArrays();
 
         main.deleteValueFromSpecificIndex(6);
-*/
+
         main.printArrays();
-
-        main.bubbleSort();
-        main.printArrays();
-
-
 
 
     }
 
-    private void bubbleSort(){
-        for (int j = (numOfElements -1); j > 1 ; j--) {
-
-            for (int i = 0; i < j; i++) {
-
-            if(arrayOfNumbers[i] > arrayOfNumbers[i+1]){
-
-                int tempValue = arrayOfNumbers[i];
-                arrayOfNumbers[i] = arrayOfNumbers[i+1];
-                arrayOfNumbers[i + 1] = tempValue;
-
-                }
-            }
-        }
-    }
 
     //printing out the table-like structure
     private void printArrays(){
