@@ -4,7 +4,9 @@ public class Main {
 
     /*1. Adding
     * 2. Searching(Linear) ==>
-    * 3. Deleting */
+    * 3. Deleting
+    * 4. Bubble Sort
+    * 5. Binary Search */
 
     //Array that will occupy as many as 50 digits
     private int [] arrayOfNumbers = new int[50];
@@ -44,6 +46,7 @@ public class Main {
 
         main.bubbleSort();
         main.printArrays();
+        main.binarySearchForValue(210);
 
 
 
@@ -135,6 +138,31 @@ public class Main {
             }
             numOfElements--;
         }
+    }
+
+    //binary search for values
+    private void binarySearchForValue(int value){
+
+        int maxIndex = numOfElements - 1;
+        int minIndex = 0;
+
+        while (minIndex <= maxIndex){
+
+            int midIndex = (maxIndex + minIndex) / 2;
+
+            if (arrayOfNumbers[midIndex] < value){
+                minIndex = midIndex;
+            }else if(arrayOfNumbers[midIndex] > value){
+                maxIndex = midIndex;
+            }else{
+                System.out.println("Value is in index: "+midIndex);
+                minIndex = numOfElements;
+            }
+
+           //TODO Break Loop
+
+        }
+
     }
 
 }
