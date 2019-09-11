@@ -6,7 +6,8 @@ public class Main {
     * 2. Searching(Linear) ==>
     * 3. Deleting
     * 4. Bubble Sort
-    * 5. Binary Search */
+    * 5. Binary Search
+    * 6. Selection Sort */
 
     //Array that will occupy as many as 50 digits
     private int [] arrayOfNumbers = new int[50];
@@ -43,11 +44,15 @@ public class Main {
         main.deleteValueFromSpecificIndex(6);
 */
         main.printArrays();
+/*
 
         main.bubbleSort();
         main.printArrays();
         main.binarySearchForValue(210);
+*/
 
+        main.selectionSort();
+        main.printArrays();
 
 
 
@@ -163,6 +168,28 @@ public class Main {
 
         }
 
+    }
+
+    //selection sort
+    private void selectionSort(){
+
+        for (int i = 0; i < numOfElements; i++) {
+
+            int tempLowerIndex = i;
+
+            for (int j = i; j < numOfElements; j++) {
+
+               if(arrayOfNumbers[tempLowerIndex] > arrayOfNumbers[j]){
+                   tempLowerIndex = j;
+               }
+
+            }
+
+            int tempValue = arrayOfNumbers[i];
+            arrayOfNumbers[i] = arrayOfNumbers[tempLowerIndex];
+            arrayOfNumbers[tempLowerIndex] = tempValue;
+
+        }
     }
 
 }
